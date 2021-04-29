@@ -9,13 +9,15 @@ def acerca():
 dia = time.strftime('%Y-%m-%d %H-%M-%S', time.localtime())
 def clicked():
     contenido = var_C.get()
-    f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
-    if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
-        return
-
-    #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
-    f.write(contenido)
-    f.close() # `()` was missing.
+    if len(contenido)>12:
+        messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
+    else:
+        f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
+        if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
+            return
+        #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
+        f.write(contenido)
+        f.close() # `()` was missing.
 
 
 
@@ -47,7 +49,7 @@ window.config(menu=menu)
 
 
 #texto
-lbl1 = Label(window, text="C")
+lbl1 = Label(window, text="Concepto Tributario")
 lbl1.grid(column=0, row=0)
 
 lbl2 =Label(window, text="Concepto Tributario")
