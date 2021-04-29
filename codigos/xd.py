@@ -3,6 +3,7 @@ import time
 from tkinter import Menu
 from tkinter import messagebox
 from tkinter import filedialog
+from tkinter.ttk import *
 
 def acerca():
     messagebox.showinfo('Creadores','Programador: Mario Manuel Galdon Gonzalez\nTio que sufrio mas : Sergio I. Coello Díaz')
@@ -26,6 +27,8 @@ def clicked():
 
 #ventana
 window = Tk()
+
+ventanas =Notebook(window)
 var_C = StringVar()
 window.title("Chechu V1.2")
 
@@ -46,24 +49,52 @@ menu.add_cascade(label='Menu', menu=new_item)
 
 window.config(menu=menu)
 
+#ventanas
+vent1 = Frame(ventanas)
+vent2 = Frame(ventanas)
 
+ventanas.add(vent1, text='Cabecera')
+ventanas.add(vent2, text='Cuerpo')
+
+#desplegable de cabezera
+desplegable= Combobox(vent1)
 
 #texto
-lbl1 = Label(window, text="Concepto Tributario")
-lbl1.grid(column=0, row=0)
 
-lbl2 =Label(window, text="Concepto Tributario")
+lbl1 = Label(vent1, text="Concepto Tributario: ")
+lbl1.grid(column=0, row=1)
 
+lbl2 =Label(vent1, text="Codigo de Entidad: ")
+lbl2.grid(column=2, row=1)
+
+lbl3 =Label(vent1, text="Ejercicio tributario:")
+lbl3.grid(column=4, row=1)
+
+lbl4 =Label(vent1, text="Periodo: ")
+lbl4.grid(column=6, row=1)
+
+lbl5_desplegable =Label(vent1,text="Situacion conocidad:")
+lbl5_desplegable.grid(column=8, row=1)
 
 #entrada de texto
 
-txt1 = Entry(window,width=10,textvariable=var_C)
-txt1.grid(column=1,row=0)
+txt1 = Entry(vent1,width=10,textvariable=var_C)
+txt1.grid(column=1,row=1)
 
-#entry = MaxLengthEntry(window, maxlength=10)
-#entry.pack(side=LEFT)
-#root.mainloop()
+txt2 = Entry(vent1,width=10)
+txt2.grid(column=3,row=1)
 
+txt3 = Entry(vent1,width=10)
+txt3.grid(column=5,row=1)
+
+txt3 = Entry(vent1,width=10)
+txt3.grid(column=7,row=1)
+#desplegables
+
+desplegable["values"]=("Ejecutiva","Voluntaria","Pruebas")
+desplegable.grid(column=9,row=1)
+
+ventanas.grid(column=0,row=0)
 window.mainloop()
 
 #archivos
