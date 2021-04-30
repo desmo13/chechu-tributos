@@ -9,15 +9,19 @@ def acerca():
     messagebox.showinfo('Creadores','Programador: Mario Manuel Galdon Gonzalez\nTio que sufrio mas : Sergio I. Coello Díaz')
 dia = time.strftime('%Y-%m-%d %H-%M-%S', time.localtime())
 def clicked():
-    contenido = var_C.get()
-    if len(contenido)>12:
+    contenido1 = Concepto_Tributario.get()
+    contenido2 = Ejercicio_Tributario.get()
+    if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
+    if len(contenido2)>5:
+        messagebox.showerror("ERROR","EL ejercio tributario no puede tener mas de 5 caracteres")
+
     else:
         f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
         if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
             return
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
-        f.write(contenido)
+        f.write(contenido1)
         f.close() # `()` was missing.
 
 
@@ -29,10 +33,23 @@ def clicked():
 window = Tk()
 
 ventanas =Notebook(window)
-var_C = StringVar()
-window.title("Chechu V1.2")
+
+window.title("Chechu V1.3")
 
 window.geometry("500x500")
+
+#variables
+Concepto_Tributario= StringVar()
+
+Codigo_Entidad = StringVar()
+
+Ejercicio_Tributario = StringVar()
+
+Periodo = StringVar()
+
+Situacion_Concepto = StringVar()
+
+Tipo_Valor = StringVar()
 
 
 
@@ -52,12 +69,25 @@ window.config(menu=menu)
 #ventanas
 vent1 = Frame(ventanas)
 vent2 = Frame(ventanas)
-
+vent3 = Frame(ventanas)
+vent4 = Frame(ventanas)
+vent5 = Frame(ventanas)
+vent6 = Frame(ventanas)
+vent7 = Frame(ventanas)
+vent8 = Frame(ventanas)
+vent9 = Frame(ventanas)
 ventanas.add(vent1, text='Cabecera')
 ventanas.add(vent2, text='Cuerpo')
-
+ventanas.add(vent3, text='Cuerpo')
+ventanas.add(vent4, text='Cuerpo')
+ventanas.add(vent5, text='Cuerpo')
+ventanas.add(vent6, text='Cuerpo')
+ventanas.add(vent7, text='Cuerpo')
+ventanas.add(vent8, text='Cuerpo')
+ventanas.add(vent9, text='Cuerpo')
 #desplegable de cabezera
-desplegable= Combobox(vent1)
+desplegable= Combobox(vent1,textvariable=Situacion_Concepto)
+desplegable2= Combobox(vent1,textvariable=Tipo_Valor)
 
 #texto
 
@@ -74,25 +104,31 @@ lbl4 =Label(vent1, text="Periodo: ")
 lbl4.grid(column=6, row=1)
 
 lbl5_desplegable =Label(vent1,text="Situacion conocidad:")
-lbl5_desplegable.grid(column=8, row=1)
+lbl5_desplegable.grid(column=0, row=2)
+
+lbl6_desplegable =Label(vent1,text="Tipo Valor:")
+lbl6_desplegable.grid(column=2, row=2)
 
 #entrada de texto
 
-txt1 = Entry(vent1,width=10,textvariable=var_C)
+txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
 txt1.grid(column=1,row=1)
 
-txt2 = Entry(vent1,width=10)
+txt2 = Entry(vent1,width=10,textvariable=Codigo_Entidad)
 txt2.grid(column=3,row=1)
 
-txt3 = Entry(vent1,width=10)
+txt3 = Entry(vent1,width=10,textvariable=Ejercicio_Tributario)
 txt3.grid(column=5,row=1)
 
-txt3 = Entry(vent1,width=10)
+txt3 = Entry(vent1,width=10,textvariable=Periodo)
 txt3.grid(column=7,row=1)
 #desplegables
 
-desplegable["values"]=("Ejecutiva","Voluntaria","Pruebas")
-desplegable.grid(column=9,row=1)
+desplegable["values"]=("E","V","P")
+desplegable.grid(column=1,row=2)
+
+desplegable2["values"]=("R","L")
+desplegable2.grid(column=3,row=2)
 
 ventanas.grid(column=0,row=0)
 window.mainloop()
