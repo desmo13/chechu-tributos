@@ -32,7 +32,7 @@ def clicked():
         if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
             return
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
-        f.write(contenido1+contenido2+contenido3+contenido4+contenido5+contenido6)
+        f.write()
         f.close() # `()` was missing.
 
 
