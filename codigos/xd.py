@@ -5,6 +5,16 @@ from tkinter import messagebox
 from tkinter import filedialog
 from tkinter.ttk import *
 
+def espacios(contenido, max):
+    contenido 
+    espacio = "."
+    if  len(contenido)<max:
+        for i in range(max - len(contenido)):
+            contenido  =  contenido + espacio 
+        print(contenido)
+    return contenido
+
+espacios("hola",11)
 def acerca():
     messagebox.showinfo('Creadores','Programador: Mario Manuel Galdon Gonzalez\nTio que sufrio mas : Sergio I. Coello Díaz')
 dia = time.strftime('%Y-%m-%d %H-%M-%S', time.localtime())
@@ -17,9 +27,9 @@ def clicked():
     contenido6 =Tipo_Valor.get()
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
-    if len(contenido3)>5:
-        messagebox.showerror("ERROR","EL Codigo de entidad no puede tener mas de 5 caracteres")
     if len(contenido2)>4:
+        messagebox.showerror("ERROR","EL Codigo de entidad no puede tener mas de 5 caracteres")
+    if len(contenido3)>5:
         messagebox.showerror("ERROR","EL Ejercicio tributario no puede tener mas de 4 caracteres")
     if len(contenido4)>2:
         messagebox.showerror("ERROR","EL Periodo no puede ser mayor a 2")
@@ -32,7 +42,8 @@ def clicked():
         if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
             return
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
-        f.write()
+        f.write("C"+ espacios(contenido1,12)+espacios(contenido2,5)+espacios(contenido3,4)+espacios(contenido4,2)+contenido5+contenido6+espacios("",308))
+        f.write("\n hola")
         f.close() # `()` was missing.
 
 
