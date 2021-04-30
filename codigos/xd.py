@@ -10,18 +10,20 @@ def acerca():
 dia = time.strftime('%Y-%m-%d %H-%M-%S', time.localtime())
 def clicked():
     contenido1 = Concepto_Tributario.get()
-    contenido2 = Ejercicio_Tributario.get()
+    contenido2 = Codigo_Entidad.get()
+    contenido3 =  Ejercicio_Tributario.get()
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
-    if len(contenido2)>5:
-        messagebox.showerror("ERROR","EL ejercio tributario no puede tener mas de 5 caracteres")
-
+    if len(contenido3)>5:
+        messagebox.showerror("ERROR","EL Codigo de entidad no puede tener mas de 5 caracteres")
+    if len(contenido2)>4:
+        messagebox.showerror("ERROR","EL Ejercicio tributario no puede tener mas de 4 caracteres")
     else:
         f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
         if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
             return
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
-        f.write(contenido1)
+        f.write(contenido1+contenido2+contenido3)
         f.close() # `()` was missing.
 
 
@@ -34,7 +36,7 @@ window = Tk()
 
 ventanas =Notebook(window)
 
-window.title("Chechu V1.3")
+window.title("Chechu V1.4")
 
 window.geometry("500x500")
 
