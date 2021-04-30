@@ -1,4 +1,4 @@
-def espacios(contenido, max):
+def numeros_espacios(contenido, max):
     contenido 
     espacio = "0"
     if  len(contenido)<max:
