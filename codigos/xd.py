@@ -94,7 +94,7 @@ ventanas =Notebook(window)
 
 window.title("Chechu V1.6")
 
-window.geometry("500x500")
+window.geometry("900x900")
 
 #variables
 Concepto_Tributario= StringVar()
@@ -200,79 +200,76 @@ lbl10_individual = Label(vent2,text="Objeto tributario")
 lbl10_individual.grid(column=6,row=1)
 
 lbl11_individual = Label(vent2,text="Codigo de Tercero")
-lbl11_individual.grid(column=8,row=1)
+lbl11_individual.grid(column=0,row=2)
 
 lbl12_individual = Label(vent2,text="Tipo de Documento" )
-lbl12_individual.grid(column=0,row=2)
+lbl12_individual.grid(column=2,row=2)
 
 lbl13_individual = Label(vent2,text="Identificador")
-lbl13_individual.grid(column=2,row=2)
+lbl13_individual.grid(column=4,row=2)
 
 lbl14_individual = Label(vent2,text="Tipo de persona")
-lbl14_individual.grid(column=4,row=2)
+lbl14_individual.grid(column=6,row=2)
 
 lbl15_individual = Label(vent2,text="Identificador normalizado")
-lbl15_individual.grid(column=6,row=2)
+lbl15_individual.grid(column=0,row=3)
 
 lbl16_individual = Label(vent2,text="1º Apellido")
-lbl16_individual.grid(column=8,row=2)
+lbl16_individual.grid(column=2,row=3)
 
 lbl17_individual = Label(vent2,text="2º Apellido")
-lbl17_individual.grid(column=0,row=3)
+lbl17_individual.grid(column=4,row=3)
 
 lbl18_individual = Label(vent2,text=" 1º Apellido Particula")
-lbl18_individual.grid(column=2,row=3)
+lbl18_individual.grid(column=6,row=3)
 
 lbl19_individual = Label(vent2,text=" 2º Apellido Particula")
-lbl19_individual.grid(column=4,row=3)
+lbl19_individual.grid(column=0,row=4)
 
 lbl20_individual = Label(vent2,text="Nombre")
-lbl20_individual.grid(column=6,row=3)
+lbl20_individual.grid(column=2,row=4)
 
 lbl21_individual = Label(vent2,text="Codigo postal")
-lbl21_individual.grid(column=8,row=3)
-
-lbl22_individual = Label(vent2,text="Codigo postal")
-lbl22_individual.grid(column=0,row=4)
+lbl21_individual.grid(column=4,row=4)
 
 lbl23_individual = Label(vent2,text="Identificador Callejero")
-lbl23_individual.grid(column=2,row=4)
+lbl23_individual.grid(column=6,row=4)
 
 lbl24_individual = Label(vent2,text="Codigo de via")
-lbl24_individual.grid(column=4,row=4)
+lbl24_individual.grid(column=0,row=5)
 
 lbl25_individual = Label(vent2,text="Tipo de via")
-lbl25_individual.grid(column=6,row=4)
+lbl25_individual.grid(column=2,row=5)
 
 lbl26_individual = Label(vent2,text="Nombre de via")
-lbl26_individual.grid(column=8,row=4)
+lbl26_individual.grid(column=4,row=5)
 
 lbl27_individual = Label(vent2,text="Numero")
-lbl27_individual.grid(column=0,row=5)
+lbl27_individual.grid(column=6,row=5)
 
 lbl28_individual = Label(vent2,text="Letra de Numero")
-lbl28_individual.grid(column=2,row=5)
+lbl28_individual.grid(column=0,row=6)
 
 lbl29_individual = Label(vent2,text="Kilometro")
-lbl29_individual.grid(column=4,row=5)
+lbl29_individual.grid(column=2,row=6)
 
 lbl30_individual = Label(vent2,text="Bloque")
-lbl30_individual.grid(column=6,row=5)
+lbl30_individual.grid(column=4,row=6)
 
 lbl31_individual = Label(vent2,text="Escalera")
-lbl31_individual.grid(column=8,row=5)
+lbl31_individual.grid(column=6,row=6)
 
 lbl32_individual = Label(vent2,text="Planta")
-lbl32_individual.grid(column=0,row=6)
+lbl32_individual.grid(column=0,row=7)
 
 lbl33_individual = Label(vent2,text="Puerta")
-lbl33_individual.grid(column=2,row=6)
+lbl33_individual.grid(column=2,row=7)
 
 lbl34_individual = Label(vent2,text="Otra informacion de la direccion")
-lbl34_individual.grid(column=4,row=6)
+lbl34_individual.grid(column=4,row=7)
 
 lbl35_individual = Label(vent2,text="Importe en €")
-lbl35_individual.grid(column=8,row=6)
+lbl35_individual.grid(column=6,row=7)
 #entrada de texto
 
 txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
@@ -300,76 +297,76 @@ txt7_individual = Entry(vent2,width=10,textvariable=Objeto_tributario)
 txt7_individual.grid(column=7,row=1)
 
 txt8_individual = Entry(vent2,width=10,textvariable=Codigo_Tercero)
-txt8_individual.grid(column=9,row=1)
+txt8_individual.grid(column=1,row=2)
 
 txt9_individual = Entry(vent2,width=10,textvariable=Tipo_Documento)
-txt9_individual.grid(column=1,row=2)
+txt9_individual.grid(column=3,row=2)
 
 txt10_individual = Entry(vent2,width=10,textvariable=Identificador)
-txt10_individual.grid(column=3,row=2)
+txt10_individual.grid(column=5,row=2)
 
 txt11_individual = Entry(vent2,width=10,textvariable=Tipo_Persona)
-txt11_individual.grid(column=5,row=2)
+txt11_individual.grid(column=7,row=2)
 
 #txt12_individual = Entry(vent2,width=10,textvariable=Identificador_Normalizado)
 #txt12_individual.grid(column=17,row=1)
 
 txt13_individual = Entry(vent2,width=10,textvariable=Apellido_1)
-txt13_individual.grid(column=9,row=2)
+txt13_individual.grid(column=3,row=3)
 
 txt14_individual = Entry(vent2,width=10,textvariable=Apellido_2)
-txt14_individual.grid(column=1,row=3)
+txt14_individual.grid(column=5,row=3)
 
 txt15_individual = Entry(vent2,width=10,textvariable=Particula_Apellido_1)
-txt15_individual.grid(column=3,row=3)
+txt15_individual.grid(column=7,row=3)
 
-txt16_individual = Entry(vent2,width=10,textvariable=Particula_Apellido_1)
-txt16_individual.grid(column=5,row=3)
+txt16_individual = Entry(vent2,width=10,textvariable=Particula_Apellido_2)
+txt16_individual.grid(column=1,row=4)
 
 txt17_individual = Entry(vent2,width=10,textvariable=Nombre)
-txt17_individual.grid(column=7,row=3)
+txt17_individual.grid(column=3,row=4)
 
 txt18_individual = Entry(vent2,width=10,textvariable=Codigo_Postal)
-txt18_individual.grid(column=9,row=3)
+txt18_individual.grid(column=5,row=4)######################################
 
-txt19_individual = Entry(vent2,width=10,textvariable=Identificador_Callejero)
-txt19_individual.grid(column=1,row=4)
+txt19_individual = Entry(vent2,width=0,textvariable=Identificador_Callejero)
+txt19_individual.grid(column=7,row=4)
 
 txt21_individual = Entry(vent2,width=10,textvariable=Codigo_Via)
-txt21_individual.grid(column=3,row=4)
+txt21_individual.grid(column=1,row=5)
 
 txt22_individual = Entry(vent2,width=10,textvariable=Tipo_Via)
-txt22_individual.grid(column=5,row=4)
+txt22_individual.grid(column=3,row=5)
 
 txt23_individual = Entry(vent2,width=10,textvariable=Nombre_Via)
-txt23_individual.grid(column=7,row=4)
+txt23_individual.grid(column=5,row=5)
 
 txt24_individual = Entry(vent2,width=10,textvariable=Numero)
-txt24_individual.grid(column=9,row=4)
+txt24_individual.grid(column=7,row=5)
 
 txt25_individual = Entry(vent2,width=10,textvariable=Letra_Numero)
-txt25_individual.grid(column=1,row=5)
+txt25_individual.grid(column=1,row=6)
 
 txt26_individual = Entry(vent2,width=10,textvariable=Kilometro)
-txt26_individual.grid(column=3,row=5)
+txt26_individual.grid(column=3,row=6)
 
-txt27_individual = Entry(vent2,width=10,textvariable=Bloque)
-txt27_individual.grid(column=5,row=5)
+txt27_individual = Entry(vent2,width=2,textvariable=Bloque)
+txt27_individual.grid(column=5,row=6)
 
 txt28_individual = Entry(vent2,width=10,textvariable=Escalera)
-txt28_individual.grid(column=7,row=5)
+txt28_individual.grid(column=7,row=6)
 
 txt29_individual = Entry(vent2,width=10,textvariable=Planta)
-txt29_individual.grid(column=9,row=5)
+txt29_individual.grid(column=1,row=7)
 
 txt30_individual = Entry(vent2,width=10,textvariable=Puerta)
-txt30_individual.grid(column=1,row=6)
+txt30_individual.grid(column=3,row=7)
 
 txt31_individual = Entry(vent2,width=10,textvariable=Otra_Informacion_direccion)
-txt31_individual.grid(column=3,row=6)
+txt31_individual.grid(column=5,row=7)
 
 txt32_individual = Entry(vent2,width=10,textvariable=Importe_Euros)
-txt32_individual.grid(column=5,row=6)
+txt32_individual.grid(column=7,row=7)
 
 
 #desplegables
@@ -381,7 +378,8 @@ desplegable2["values"]=("R","L")
 desplegable2.grid(column=3,row=2)
 
 desplegable3["values"]=("S" ,"N")
-ventanas.grid(column=7,row=2)
+desplegable3.grid(column=1,row=3)
+ventanas.grid(column=10,row=10)
 window.mainloop()
 
 #archivos
