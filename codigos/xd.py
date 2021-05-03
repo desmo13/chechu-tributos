@@ -79,9 +79,15 @@ def clicked():
     contenido49 = Puerta_Fiscal.get()
     contenido50 = Otra_Informacion_direccion_Fiscal.get()
 
-    contenido51 = L1
-    contenido52 = L2
-    contenido53
+    contenido51 = L1.get()
+    contenido52 = L2.get()
+    contenido53 = l3.get()
+    contenido54 = l4.get()
+    contenido55 = l5.get()
+    contenido56 = l6.get()
+    contenido57 = l7.get()
+    contenido58 = l8.get()
+
 
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
@@ -103,6 +109,14 @@ def clicked():
         f.write("C"+ espacios(contenido1,12)+espacios(contenido2,5)+espacios(contenido3,4)+espacios(contenido4,2)+contenido5+contenido6+espacios("",308))
         f.write("\nI"+espacios(contenido7,5)+espacios("",8)+espacios(contenido8,24)+espacios(contenido9,15)+espacios("",1)+espacios(contenido10,24)+espacios(contenido11,12)+numeros_espacios(contenido12,1)+espacios(contenido13,20)+espacios(contenido14,1)+espacios(contenido15,1)+espacios(contenido16,25)+espacios(contenido17,25)+espacios(contenido18,6)+espacios(contenido19,6)+espacios(contenido20,20)+numeros_espacios(contenido21,5)+espacios(contenido22,1)+numeros_espacios(contenido23,5)+espacios(contenido24,5)+espacios(contenido25,50)+numeros_espacios(contenido26,4)+espacios(contenido27,1)+numeros_espacios(contenido28,5)+espacios(contenido29,2)+espacios(contenido30,2)+espacios(contenido31,3)+espacios(contenido32,4)+espacios(contenido33,40)+numeros_espacios(contenido34,12))
         f.write("\nF"+numeros_espacios(contenido35,3)+numeros_espacios(contenido36,2)+numeros_espacios(contenido37,3)+numeros_espacios(contenido38,5)+espacios(contenido39,1)+numeros_espacios(contenido40,5)+espacios(contenido41,5)+espacios(contenido42,50)+numeros_espacios(contenido43,4)+espacios(contenido44,1)+numeros_espacios(contenido45,5)+espacios(contenido46,2)+espacios(contenido47,2)+espacios(contenido48,3)+espacios(contenido49,4)+espacios(contenido50,40)+espacios("",198))
+        f.write("\nL1"+espacios(contenido51,80)+espacios("",252))
+        f.write("\nL2"+espacios(contenido52,80)+espacios("",252))
+        f.write("\nL3"+espacios(contenido53,80)+espacios("",252))
+        f.write("\nL4"+espacios(contenido54,80)+espacios("",252))
+        f.write("\nL5"+espacios(contenido55,80)+espacios("",252))
+        f.write("\nL6"+espacios(contenido56,80)+espacios("",252))
+        f.write("\nL7"+espacios(contenido57,80)+espacios("",252))
+        f.write("\nL8"+espacios(contenido58,80)+espacios("",252))
         f.close() # `()` was missing.
 
 
@@ -537,28 +551,28 @@ txt15_fiscal.grid(column=5,row=4)
 txt16_fiscal = Entry(vent3,width=10,textvariable=Otra_Informacion_direccion_Fiscal)
 txt16_fiscal.grid(column=7,row=4)
 
-txt1_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt1_linea_recibo = Entry(vent4,width=10,textvariable=L1)
 txt1_linea_recibo.grid(column=1,row=1)
 
-txt2_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt2_linea_recibo = Entry(vent4,width=10,textvariable=L2)
 txt2_linea_recibo.grid(column=1,row=2)
 
-txt3_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt3_linea_recibo = Entry(vent4,width=10,textvariable=l3)
 txt3_linea_recibo.grid(column=1,row=3)
 
-txt4_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt4_linea_recibo = Entry(vent4,width=10,textvariable=l4)
 txt4_linea_recibo.grid(column=1,row=4)
 
-txt5_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt5_linea_recibo = Entry(vent4,width=10,textvariable=l5)
 txt5_linea_recibo.grid(column=1,row=5)
 
-txt6_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt6_linea_recibo = Entry(vent4,width=10,textvariable=l6)
 txt6_linea_recibo.grid(column=1,row=6)
 
-txt7_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt7_linea_recibo = Entry(vent4,width=10,textvariable=l7)
 txt7_linea_recibo.grid(column=1,row=7)
 
-txt8_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt8_linea_recibo = Entry(vent4,width=10,textvariable=l8)
 txt8_linea_recibo.grid(column=1,row=8)
 #desplegables
 
