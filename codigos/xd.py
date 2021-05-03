@@ -79,6 +79,10 @@ def clicked():
     contenido49 = Puerta_Fiscal.get()
     contenido50 = Otra_Informacion_direccion_Fiscal.get()
 
+    contenido51 = L1
+    contenido52 = L2
+    contenido53
+
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
     if len(contenido2)>5:
@@ -111,7 +115,7 @@ window = Tk()
 
 ventanas =Notebook(window)
 
-window.title("Chechu V1.6")
+window.title("Chechu V1.7")
 
 window.geometry("900x900")
 
@@ -168,6 +172,14 @@ Planta_Fiscal = StringVar()
 Puerta_Fiscal = StringVar()
 Otra_Informacion_direccion_Fiscal = StringVar()
 
+L1 =StringVar()
+L2 = StringVar()
+l3 = StringVar()
+l4 = StringVar()
+l5 = StringVar()
+l6 = StringVar()
+l7 = StringVar()
+l8 = StringVar()
 #menu de arriba
 menu = Menu(window)
 
@@ -356,7 +368,29 @@ lbl15_fiscal.grid(column=4,row=4)
 lbl16_fiscal = Label(vent3,text=" Otra Información de la Dirección ")
 lbl16_fiscal.grid(column=6,row=4)
 
+lbl1Recibo = Label(vent4,text="Línea del recibo 1:")
+lbl1Recibo.grid(column=0,row=1)
 
+lb2Recibo = Label(vent4,text="Línea del recibo 2:")
+lb2Recibo.grid(column=0,row=2)
+
+lb3Recibo = Label(vent4,text="Línea del recibo 3:")
+lb3Recibo.grid(column=0,row=3)
+
+lb4Recibo = Label(vent4,text="Línea del recibo 4:")
+lb4Recibo.grid(column=0,row=4)
+
+lb5Recibo = Label(vent4,text="Línea del recibo 5:")
+lb5Recibo.grid(column=0,row=5)
+
+lb6Recibo = Label(vent4,text="Línea del recibo 6:")
+lb6Recibo.grid(column=0,row=6)
+
+lb7Recibo = Label(vent4,text="Línea del recibo 7:")
+lb7Recibo.grid(column=0,row=7)
+
+lb8Recibo = Label(vent4,text="Línea del recibo 8:")
+lb8Recibo.grid(column=0,row=8)
 #entrada de texto
 
 txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
@@ -503,7 +537,29 @@ txt15_fiscal.grid(column=5,row=4)
 txt16_fiscal = Entry(vent3,width=10,textvariable=Otra_Informacion_direccion_Fiscal)
 txt16_fiscal.grid(column=7,row=4)
 
+txt1_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt1_linea_recibo.grid(column=1,row=1)
 
+txt2_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt2_linea_recibo.grid(column=1,row=2)
+
+txt3_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt3_linea_recibo.grid(column=1,row=3)
+
+txt4_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt4_linea_recibo.grid(column=1,row=4)
+
+txt5_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt5_linea_recibo.grid(column=1,row=5)
+
+txt6_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt6_linea_recibo.grid(column=1,row=6)
+
+txt7_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt7_linea_recibo.grid(column=1,row=7)
+
+txt8_linea_recibo = Entry(vent4,width=10,textvariable=)
+txt8_linea_recibo.grid(column=1,row=8)
 #desplegables
 
 desplegable["values"]=("E","V","P")
