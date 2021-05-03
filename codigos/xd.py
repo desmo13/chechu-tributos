@@ -61,6 +61,24 @@ def clicked():
     contenido32 = Puerta.get()
     contenido33 = Otra_Informacion_direccion.get()
     contenido34 =Importe_Euros.get()
+    
+    contenido35 = Pais_Fiscal.get()
+    contenido36 = Provincia_Fiscal.get()
+    contenido37 = Poblacion_Fiscal.get()
+    contenido38 = Codigo_Postal_Direcion_Fiscla.get()
+    contenido39 = Identificador_Callejero_Fiscal.get()
+    contenido40 = Codigo_Via_Fiscal.get()
+    contenido41 = Tipo_Via_Fiscal.get()
+    contenido42 = Nombre_Via_Fiscal.get()
+    contenido43 = Numero_Fiscal.get()
+    contenido44 = Letra_Numero_Fiscal.get()
+    contenido45 = Kilometro_Fiscal.get()
+    contenido46 = Bloque_Fiscal.get()
+    contenido47 = Escalera_Fiscal.get()
+    contenido48 = Planta_Fiscal.get()
+    contenido49 = Puerta_Fiscal.get()
+    contenido50 = Otra_Informacion_direccion_Fiscal.get()
+
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
     if len(contenido2)>5:
@@ -80,6 +98,7 @@ def clicked():
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
         f.write("C"+ espacios(contenido1,12)+espacios(contenido2,5)+espacios(contenido3,4)+espacios(contenido4,2)+contenido5+contenido6+espacios("",308))
         f.write("\nI"+espacios(contenido7,5)+espacios("",8)+espacios(contenido8,24)+espacios(contenido9,15)+espacios("",1)+espacios(contenido10,24)+espacios(contenido11,12)+numeros_espacios(contenido12,1)+espacios(contenido13,20)+espacios(contenido14,1)+espacios(contenido15,1)+espacios(contenido16,25)+espacios(contenido17,25)+espacios(contenido18,6)+espacios(contenido19,6)+espacios(contenido20,20)+numeros_espacios(contenido21,5)+espacios(contenido22,1)+numeros_espacios(contenido23,5)+espacios(contenido24,5)+espacios(contenido25,50)+numeros_espacios(contenido26,4)+espacios(contenido27,1)+numeros_espacios(contenido28,5)+espacios(contenido29,2)+espacios(contenido30,2)+espacios(contenido31,3)+espacios(contenido32,4)+espacios(contenido33,40)+numeros_espacios(contenido34,12))
+        f.write("\nF"+numeros_espacios(contenido35,3)+numeros_espacios(contenido36,2)+numeros_espacios(contenido37,3)+numeros_espacios(contenido38,5)+espacios(contenido39,1)+numeros_espacios(contenido40,5)+espacios(contenido41,5)+espacios(contenido42,50)+numeros_espacios(contenido43,4)+espacios(contenido44,1)+numeros_espacios(contenido45,5)+espacios(contenido46,2)+espacios(contenido47,2)+espacios(contenido48,3)+espacios(contenido49,4)+espacios(contenido50,40)+espacios("",198))
         f.close() # `()` was missing.
 
 
@@ -131,6 +150,24 @@ Puerta = StringVar()
 Otra_Informacion_direccion = StringVar()
 Importe_Euros = StringVar() 
 Numero = StringVar()
+
+Pais_Fiscal = StringVar()
+Provincia_Fiscal = StringVar()
+Poblacion_Fiscal = StringVar()
+Codigo_Postal_Direcion_Fiscla =StringVar()
+Identificador_Callejero_Fiscal =StringVar()
+Codigo_Via_Fiscal = StringVar()
+Tipo_Via_Fiscal = StringVar()
+Nombre_Via_Fiscal = StringVar()
+Numero_Fiscal = StringVar()
+Letra_Numero_Fiscal =StringVar()
+Kilometro_Fiscal = StringVar()
+Bloque_Fiscal = StringVar()
+Escalera_Fiscal = StringVar()
+Planta_Fiscal = StringVar()
+Puerta_Fiscal = StringVar()
+Otra_Informacion_direccion_Fiscal = StringVar()
+
 #menu de arriba
 menu = Menu(window)
 
@@ -270,6 +307,56 @@ lbl34_individual.grid(column=4,row=7)
 
 lbl35_individual = Label(vent2,text="Importe en €")
 lbl35_individual.grid(column=6,row=7)
+
+lbl1_fiscal = Label(vent3,text="Pais Fiscal")
+lbl1_fiscal.grid(column=0,row=1)
+
+lbl2_fiscal = Label(vent3,text="Provincia Fiscal")
+lbl2_fiscal.grid(column=2,row=1)
+
+lbl3_fiscal = Label(vent3,text="Poblacion Fiscal")
+lbl3_fiscal.grid(column=4,row=1)
+
+lbl4_fiscal = Label(vent3,text="Código Postal Dirección Fiscal")
+lbl4_fiscal.grid(column=6,row=1)
+
+lbl5_fiscal = Label(vent3,text="Identificador de Callejero ")
+lbl5_fiscal.grid(column=0,row=2)
+
+lbl6_fiscal = Label(vent3,text="Código de Vía")
+lbl6_fiscal.grid(column=2,row=2)
+
+lbl7_fiscal = Label(vent3,text="Tipo de Vía")
+lbl7_fiscal.grid(column=4,row=2)
+
+lbl8_fiscal = Label(vent3,text="Nombre de Vía")
+lbl8_fiscal.grid(column=6,row=2)
+
+lbl9_fiscal = Label(vent3,text="Número Número")
+lbl9_fiscal.grid(column=0,row=3)
+
+lbl10_fiscal = Label(vent3,text=" Letra de Número")
+lbl10_fiscal.grid(column=2,row=3)
+
+lbl11_fiscal = Label(vent3,text=" Kilómetro")
+lbl11_fiscal.grid(column=4,row=3)
+
+lbl12_fiscal = Label(vent3,text=" Bloque")
+lbl12_fiscal.grid(column=6,row=3)
+
+lbl13_fiscal = Label(vent3,text=" Escalera")
+lbl13_fiscal.grid(column=0,row=4)
+
+lbl14_fiscal = Label(vent3,text=" Planta")
+lbl14_fiscal.grid(column=2,row=4)
+
+lbl15_fiscal = Label(vent3,text=" Puerta ")
+lbl15_fiscal.grid(column=4,row=4)
+
+lbl16_fiscal = Label(vent3,text=" Otra Información de la Dirección ")
+lbl16_fiscal.grid(column=6,row=4)
+
+
 #entrada de texto
 
 txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
@@ -327,7 +414,7 @@ txt17_individual = Entry(vent2,width=10,textvariable=Nombre)
 txt17_individual.grid(column=3,row=4)
 
 txt18_individual = Entry(vent2,width=10,textvariable=Codigo_Postal)
-txt18_individual.grid(column=5,row=4)######################################
+txt18_individual.grid(column=5,row=4)
 
 txt19_individual = Entry(vent2,width=0,textvariable=Identificador_Callejero)
 txt19_individual.grid(column=7,row=4)
@@ -367,6 +454,54 @@ txt31_individual.grid(column=5,row=7)
 
 txt32_individual = Entry(vent2,width=10,textvariable=Importe_Euros)
 txt32_individual.grid(column=7,row=7)
+
+txt1_fiscal = Entry(vent3,width=10,textvariable=Pais_Fiscal)
+txt1_fiscal.grid(column=1,row=1)
+
+txt2_fiscal = Entry(vent3,width=10,textvariable=Provincia_Fiscal)
+txt2_fiscal.grid(column=3,row=1)
+
+txt3_fiscal = Entry(vent3,width=10,textvariable=Poblacion_Fiscal)
+txt3_fiscal.grid(column=5,row=1)
+
+txt4_fiscal = Entry(vent3,width=10,textvariable=Codigo_Postal_Direcion_Fiscla)
+txt4_fiscal.grid(column=7,row=1)
+
+txt5_fiscal = Entry(vent3,width=10,textvariable=Identificador_Callejero_Fiscal)
+txt5_fiscal.grid(column=1,row=2)
+
+txt6_fiscal = Entry(vent3,width=10,textvariable=Codigo_Via_Fiscal)
+txt6_fiscal.grid(column=3,row=2)
+
+txt7_fiscal = Entry(vent3,width=10,textvariable=Tipo_Via_Fiscal)
+txt7_fiscal.grid(column=5,row=2)
+
+txt8_fiscal = Entry(vent3,width=10,textvariable=Nombre_Via)
+txt8_fiscal.grid(column=7,row=2)
+
+txt9_fiscal = Entry(vent3,width=10,textvariable=Numero_Fiscal)
+txt9_fiscal.grid(column=1,row=3)
+
+txt10_fiscal = Entry(vent3,width=10,textvariable=Letra_Numero_Fiscal)
+txt10_fiscal.grid(column=3,row=3)
+
+txt11_fiscal = Entry(vent3,width=10,textvariable=Kilometro_Fiscal)
+txt11_fiscal.grid(column=5,row=3)
+
+txt12_fiscal = Entry(vent3,width=10,textvariable=Bloque_Fiscal)
+txt12_fiscal.grid(column=7,row=3)
+
+txt13_fiscal = Entry(vent3,width=10,textvariable=Escalera_Fiscal)
+txt13_fiscal.grid(column=1,row=4)
+
+txt14_fiscal = Entry(vent3,width=10,textvariable=Planta_Fiscal)
+txt14_fiscal.grid(column=3,row=4)
+
+txt15_fiscal = Entry(vent3,width=10,textvariable=Puerta_Fiscal)
+txt15_fiscal.grid(column=5,row=4)
+
+txt16_fiscal = Entry(vent3,width=10,textvariable=Otra_Informacion_direccion_Fiscal)
+txt16_fiscal.grid(column=7,row=4)
 
 
 #desplegables
