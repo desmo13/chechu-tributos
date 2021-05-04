@@ -97,9 +97,9 @@ def clicked():
         messagebox.showerror("ERROR","EL Ejercicio tributario no puede tener mas de 4 caracteres")
     if len(contenido4)>2:
         messagebox.showerror("ERROR","EL Periodo no puede ser mayor a 2")
-    if contenido5==" ":
+    if len(contenido5)>0:
         messagebox.showerror("ERROR","Seleciona algo en el desplegable de Situacion concepto")
-    if contenido6==" ":
+    if len(contenido6)>0:
          messagebox.showerror("ERROR","Seleciona algo en el desplegable de Tipo Valor")
     else:
         f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
@@ -194,6 +194,34 @@ l5 = StringVar()
 l6 = StringVar()
 l7 = StringVar()
 l8 = StringVar()
+
+Tipo_Tercero =StringVar()
+Codigo_Tercero_Tercero = StringVar()
+Tipo_Documento_Tercero = StringVar()
+Identificador_Tercero =StringVar()
+Tipo_Persona_Tercero = StringVar()
+Identificador_Normalizado_Tercero = StringVar()
+Apellido_1_tercero = StringVar()
+Apellido_2_tercero =StringVar()
+Particular_apellido_1_tercero = StringVar()
+Particular_apellido_2_tercero = StringVar()
+Nombre_tercero = StringVar()
+Pais_Fiscal_TERCERO = StringVar()
+Provincia_Fiscal_tercero = StringVar()
+Codigo_postal_tributario_tercero = StringVar()
+Identificador_Callejero_tercero = StringVar()
+Codigo_Via_tercero =StringVar()
+tipo_de_via_tercero = StringVar()
+Nombre_de_via_tercero = StringVar()
+Numero_tercero = StringVar()
+Letra_Numero_tercero = StringVar()
+Kilometro_tercero = StringVar()
+Bloque_tercero = StringVar()
+Escalera_tercero = StringVar()
+Planta_tercero = StringVar()
+Puerta_tercero = StringVar()
+Otra_Informacion_direccion_tercero = StringVar()
+Poblacion_Fiscal_tercero= StringVar()
 #menu de arriba
 menu = Menu(window)
 
@@ -230,6 +258,8 @@ ventanas.add(vent9, text='Cuerpo')
 desplegable= Combobox(vent1,textvariable=Situacion_Concepto)
 desplegable2= Combobox(vent1,textvariable=Tipo_Valor)
 desplegable3= Combobox(vent2,textvariable=Identificador_Normalizado)
+desplegable4= Combobox(vent5,textvariable=Identificador_Normalizado_Tercero)
+desplegable5= Combobox(vent5,textvariable=Identificador_Callejero_tercero)
 #texto
 
 lbl1 = Label(vent1, text="Concepto Tributario: ")
@@ -405,6 +435,88 @@ lb7Recibo.grid(column=0,row=7)
 
 lb8Recibo = Label(vent4,text="Línea del recibo 8:")
 lb8Recibo.grid(column=0,row=8)
+
+lbl1Asociado = Label(vent5,text="Tipo de Tercero")
+lbl1Asociado.grid(column=0,row=0)
+
+
+lbl2Asociado = Label(vent5,text=" Código de Tercero")
+lbl2Asociado.grid(column=2,row=0)
+
+lblAsociado = Label(vent5,text="Tipo de Documento")
+lblAsociado.grid(column=4,row=0)
+
+lbl3Asociado = Label(vent5,text="Identificador")
+lbl3Asociado.grid(column=6,row=0)
+
+lbl4Asociado = Label(vent5,text="Tipo de Persona")
+lbl4Asociado.grid(column=0,row=1)
+
+lbl5Asociado = Label(vent5,text=" Identificador Normalizado ")
+lbl5Asociado.grid(column=2,row=1)
+
+lbl6Asociado = Label(vent5,text="Apellido 1")
+lbl6Asociado.grid(column=4,row=1)
+
+lbl7Asociado = Label(vent5,text=" Apellido 2")
+lbl7Asociado.grid(column=6,row=1)
+
+lbl8Asociado = Label(vent5,text=" Partícula Apellido 1")
+lbl8Asociado.grid(column=0,row=2)
+
+lbl9Asociado = Label(vent5,text="Partícula Apellido 2")
+lbl9Asociado.grid(column=2,row=2)
+
+lbl10Asociado = Label(vent5,text="Nombre ")
+lbl10Asociado.grid(column=4,row=2)
+
+lbl11Asociado = Label(vent5,text="País Fiscal")
+lbl11Asociado.grid(column=6,row=2)
+
+lbl12Asociado = Label(vent5,text=" Provincia Fiscal")
+lbl12Asociado.grid(column=0,row=3)
+
+lbl13Asociado = Label(vent5,text=" Población Fiscal ")
+lbl13Asociado.grid(column=2,row=3)
+
+lbl14Asociado = Label(vent5,text="Código Postal Tributario ")
+lbl14Asociado.grid(column=4,row=3)
+
+lbl15Asociado = Label(vent5,text="Identificador de Callejero")
+lbl15Asociado.grid(column=6,row=3)
+
+lbl16Asociado = Label(vent5,text="Código de Vía (5)")
+lbl16Asociado.grid(column=0,row=4)
+
+lbl17Asociado = Label(vent5,text="Tipo de Vía")
+lbl17Asociado.grid(column=2,row=4)
+
+lbl18Asociado = Label(vent5,text="Nombre de Vía")
+lbl18Asociado.grid(column=4,row=4)
+
+lbl19Asociado = Label(vent5,text="Número ")
+lbl19Asociado.grid(column=6,row=4)
+
+lbl20Asociado = Label(vent5,text="Letra del Número ")
+lbl20Asociado.grid(column=0,row=5)
+
+lbl21Asociado = Label(vent5,text="Kilómetro ")
+lbl21Asociado.grid(column=2,row=5)
+
+lbl22Asociado = Label(vent5,text="Bloque  ")
+lbl22Asociado.grid(column=4,row=5)
+
+lbl23Asociado = Label(vent5,text="Escalera   ")
+lbl23Asociado.grid(column=6,row=5)
+
+lbl24Asociado = Label(vent5,text="Planta    ")
+lbl24Asociado.grid(column=0,row=6)
+
+lbl26Asociado = Label(vent5,text="Puerta     ")
+lbl26Asociado.grid(column=2,row=6)
+
+lbl27Asociado = Label(vent5,text="Otra Información de la Dirección      ")
+lbl27Asociado.grid(column=4,row=6)
 #entrada de texto
 
 txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
@@ -574,6 +686,91 @@ txt7_linea_recibo.grid(column=1,row=7)
 
 txt8_linea_recibo = Entry(vent4,width=10,textvariable=l8)
 txt8_linea_recibo.grid(column=1,row=8)
+
+txt1_Asosiado = Entry(vent5,width=10,textvariable=Tipo_Tercero)
+txt1_Asosiado.grid(column=1,row=0)
+
+txt2_Asosiado = Entry(vent5,width=10,textvariable=Codigo_Tercero_Tercero)
+txt2_Asosiado.grid(column=3,row=0)
+
+txt3_Asosiado = Entry(vent5,width=10,textvariable=Tipo_Documento_Tercero)
+txt3_Asosiado.grid(column=5,row=0)
+
+txt4_Asosiado = Entry(vent5,width=10,textvariable=Identificador_Tercero)
+txt4_Asosiado.grid(column=7,row=0)
+
+txt5_Asosiado = Entry(vent5,width=10,textvariable=Tipo_Persona_Tercero)
+txt5_Asosiado.grid(column=1,row=1)
+
+desplegable4["values"]=("P","B")
+ventanas.grid(column=3,row=1)
+
+
+
+txt8_Asosiado = Entry(vent5,width=1,textvariable=Apellido_1_tercero)
+txt8_Asosiado.grid(column=5,row=1)
+
+txt9_Asosiado = Entry(vent5,width=10,textvariable=Apellido_2_tercero)
+txt9_Asosiado.grid(column=7,row=1)
+
+txt10_Asosiado = Entry(vent5,width=10,textvariable=Particular_apellido_1_tercero)
+txt10_Asosiado.grid(column=1,row=2)
+
+txt11_Asosiado = Entry(vent5,width=10,textvariable=Particular_apellido_2_tercero)
+txt11_Asosiado.grid(column=3,row=2)
+
+txt12_Asosiado = Entry(vent5,width=10,textvariable=Nombre_tercero)
+txt12_Asosiado.grid(column=5,row=2)
+
+txt13_Asosiado = Entry(vent5,width=10,textvariable=Pais_Fiscal_TERCERO)
+txt13_Asosiado.grid(column=7,row=2)
+
+txt14_Asosiado = Entry(vent5,width=10,textvariable=Provincia_Fiscal_tercero)
+txt14_Asosiado.grid(column=1,row=3)
+
+txt15_Asosiado = Entry(vent5,width=10,textvariable=Poblacion_Fiscal_tercero)
+txt15_Asosiado.grid(column=3,row=3)
+
+
+
+txt17_Asosiado = Entry(vent5,width=10,textvariable=Codigo_postal_tributario_tercero)
+txt17_Asosiado.grid(column=5,row=3)
+
+desplegable5["values"]=("S","N")
+ventanas.grid(column=7,row=3)
+
+txt19_Asosiado = Entry(vent5,width=10,textvariable=Codigo_Via_tercero)
+txt19_Asosiado.grid(column=1,row=4)
+
+txt20_Asosiado = Entry(vent5,width=10,textvariable=tipo_de_via_tercero)
+txt20_Asosiado.grid(column=3,row=4)
+
+txt21_Asosiado = Entry(vent5,width=10,textvariable=Nombre_de_via_tercero)
+txt21_Asosiado.grid(column=5,row=4)
+
+txt22_Asosiado = Entry(vent5,width=10,textvariable=Numero_tercero)
+txt22_Asosiado.grid(column=7,row=4)
+
+txt23_Asosiado = Entry(vent5,width=10,textvariable=Letra_Numero_tercero)
+txt23_Asosiado.grid(column=1,row=5)
+
+txt24_Asosiado = Entry(vent5,width=10,textvariable=Kilometro_tercero)
+txt24_Asosiado.grid(column=3,row=5)
+
+txt25_Asosiado = Entry(vent5,width=10,textvariable=Bloque_tercero)
+txt25_Asosiado.grid(column=5,row=5)
+
+txt26_Asosiado = Entry(vent5,width=10,textvariable=Escalera_tercero)
+txt26_Asosiado.grid(column=7,row=5)
+
+txt27_Asosiado = Entry(vent5,width=10,textvariable=Planta_tercero)
+txt27_Asosiado.grid(column=1,row=6)
+
+txt28_Asosiado = Entry(vent5,width=10,textvariable=Puerta_tercero)
+txt28_Asosiado.grid(column=3,row=6)
+
+txt29_Asosiado = Entry(vent5,width=10,textvariable=Otra_Informacion_direccion_tercero)
+txt29_Asosiado.grid(column=5,row=6)
 #desplegables
 
 desplegable["values"]=("E","V","P")
@@ -584,7 +781,13 @@ desplegable2.grid(column=3,row=2)
 
 desplegable3["values"]=("S" ,"N")
 desplegable3.grid(column=1,row=3)
-ventanas.grid(column=10,row=10)
+
+desplegable4["values"]=("P","B")
+desplegable4.grid(column=3,row=1)
+
+desplegable5["values"]=("S","N")
+desplegable5.grid(column=7,row=3)
+
 window.mainloop()
 
 #archivos
