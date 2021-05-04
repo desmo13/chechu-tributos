@@ -88,7 +88,33 @@ def clicked():
     contenido57 = l7.get()
     contenido58 = l8.get()
 
-
+    contenido60 =Tipo_Tercero.get()
+    contenido61 = Codigo_Tercero_Tercero.get()
+    contenido62 = Tipo_Documento_Tercero.get()
+    contenido63 =  Identificador_Tercero.get()
+    contenido64 = Tipo_Persona_Tercero.get()
+    contenido68 = Identificador_Normalizado_Tercero.get()
+    contenido69 = Apellido_1_tercero.get()
+    contenido70 = Apellido_2_tercero.get()
+    contenido71 = Particular_apellido_1_tercero.get()
+    contenido72 = Particular_apellido_2_tercero.get()
+    contenido73 = Nombre_tercero.get()
+    contenido74 = Pais_Fiscal_TERCERO.get()
+    contenido75 = Provincia_Fiscal_tercero.get()
+    contenido76 = Poblacion_Fiscal_tercero.get()
+    contenido77 = Codigo_postal_tributario_tercero.get()
+    contenido78 =  Identificador_Callejero_tercero.get()
+    contenido79 = Codigo_Via_tercero.get()
+    contenido80 = tipo_de_via_tercero.get()
+    contenido81 = Nombre_de_via_tercero.get()
+    contenido82 = Numero_tercero.get()
+    contenido83 = Letra_Numero_tercero.get()
+    contenido84 = Kilometro_tercero.get()
+    contenido85 = Bloque_tercero.get()
+    contenido86 =Escalera_tercero.get()
+    contenido87 =Planta_tercero.get()
+    contenido88 = Puerta_tercero.get()
+    contenido89 = Otra_Informacion_direccion_tercero.get()
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
     if len(contenido2)>5:
@@ -117,6 +143,7 @@ def clicked():
         f.write("\nL6"+espacios(contenido56,80)+espacios("",252))
         f.write("\nL7"+espacios(contenido57,80)+espacios("",252))
         f.write("\nL8"+espacios(contenido58,80)+espacios("",252))
+        f.write("\nA")
         f.close() # `()` was missing.
 
 
@@ -702,8 +729,7 @@ txt4_Asosiado.grid(column=7,row=0)
 txt5_Asosiado = Entry(vent5,width=10,textvariable=Tipo_Persona_Tercero)
 txt5_Asosiado.grid(column=1,row=1)
 
-desplegable4["values"]=("P","B")
-ventanas.grid(column=3,row=1)
+
 
 
 
@@ -736,8 +762,7 @@ txt15_Asosiado.grid(column=3,row=3)
 txt17_Asosiado = Entry(vent5,width=10,textvariable=Codigo_postal_tributario_tercero)
 txt17_Asosiado.grid(column=5,row=3)
 
-desplegable5["values"]=("S","N")
-ventanas.grid(column=7,row=3)
+
 
 txt19_Asosiado = Entry(vent5,width=10,textvariable=Codigo_Via_tercero)
 txt19_Asosiado.grid(column=1,row=4)
