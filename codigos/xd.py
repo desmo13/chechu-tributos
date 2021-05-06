@@ -115,6 +115,37 @@ def clicked():
     contenido84 =Planta_tercero.get()
     contenido85 = Puerta_tercero.get()
     contenido86 = Otra_Informacion_direccion_tercero.get()
+
+    contenido91 = codigo_de_tercero_domicilio.get()
+    contenido92= Tipo_Documento_domicilio.get()
+    contenido93 = Identificador_domicilio.get()
+    contenido94 =Tipo_Persona_domicilio.get()
+    contenido95 = Identificador_Normalizado_domicilio.get()
+    contenido96 = Apellido_1_domicilio.get()
+    contenido97 = Apellido_2_domicilio.get()
+    contenido98 = Particula_Apellido_1_domicilio.get()
+    contenido99 = Particula_Apellido_2_domicilio.get()
+    contenido100 = Nombre_domicilio.get()
+    contenido101 = Pais_Fiscal_domicilio.get()
+    contenido102 = Provincia_Fiscal_domicilio.get()
+    contenido103 = Poblacion_Fiscal_domicilio.get()
+    contenido104 = Codigo_postal_tributario_domicilio.get()
+    contenido105 = Identificador_Callejero_domicilio.get()
+    contenido106 = Codigo_Via_domicilio.get()
+    contenido107 = Tipo_Via_domicilio.get()
+    contenido108 =  Nombre_Via_domicilio.get()
+    contenido109 = Numero_domicilio.get()
+    contenido110 = Letra_Numero_domicilio.get()
+    contenido111 =  Kilometro_domicilio.get()
+    contenido112 = Bloque_domicilio.get()
+    contenido113 = Escalera_domicilio.get()
+    contenido114 =  Planta_domicilio.get()
+    contenido115 = Puerta_domicilio.get()
+    contenido116 = Otra_Informacion_direccion_domicilio.get()
+    contenido117 =  Codigo_banco_domicilio.get()
+    contenido118 = Codigo_sucursal_domicilio.get()
+    contenido119 =  Check_domicilio.get()
+    contenido120 = numero_cuenta_domicilio.get()
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
     if len(contenido2)>5:
@@ -123,9 +154,9 @@ def clicked():
         messagebox.showerror("ERROR","EL Ejercicio tributario no puede tener mas de 4 caracteres")
     if len(contenido4)>2:
         messagebox.showerror("ERROR","EL Periodo no puede ser mayor a 2")
-    if len(contenido5)>0:
+    if len(contenido5)<0:
         messagebox.showerror("ERROR","Seleciona algo en el desplegable de Situacion concepto")
-    if len(contenido6)>0:
+    if len(contenido6)<0:
          messagebox.showerror("ERROR","Seleciona algo en el desplegable de Tipo Valor")
     else:
         f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
@@ -143,7 +174,7 @@ def clicked():
         f.write("\nL6"+espacios(contenido56,80)+espacios("",252))
         f.write("\nL7"+espacios(contenido57,80)+espacios("",252))
         f.write("\nL8"+espacios(contenido58,80)+espacios("",252))
-        f.write("\nA"+espacios(60,1)+espacios(61,12)+numeros_espacios(62,1)+espacios(63,20)+espacios(64,1)+espacios(65,1)+espacios(66,25)+espacios(67,25)+espcios(68,6)+espacios(69,6)+espacios(70,20)+numeros_espacios(71,3)+numeros_espacios(72,2)+numeros_espacios(73,3)+numeros_espacios(74,5)+espacios(75,1)+numeros_espacios(76,5)+espacios(77,5)+espacios(78,50)+numeros_espacios(79,4)+espacios(80,1)+numeros_espacios(81,5)+espacios(82,2)+espacios(83,2)+espacios(84,3)+espacios(85,4)+espacios(86,40)+espacios(",80"))
+        f.write("\nA"+espacios(contenido60,1)+espacios(contenido61,12)+numeros_espacios(contenido62,1)+espacios(contenido63,20)+espacios(contenido64,1)+espacios(contenido65,1)+espacios(contenido66,25)+espacios(contenido67,25)+espacios(contenido68,6)+espacios(contenido69,6)+espacios(contenido70,20)+numeros_espacios(contenido71,3)+numeros_espacios(contenido72,2)+numeros_espacios(contenido73,3)+numeros_espacios(contenido74,5)+espacios(contenido75,1)+numeros_espacios(contenido76,5)+espacios(contenido77,5)+espacios(contenido78,50)+numeros_espacios(contenido79,4)+espacios(contenido80,1)+numeros_espacios(contenido81,5)+espacios(contenido82,2)+espacios(contenido83,2)+espacios(contenido84,3)+espacios(contenido85,4)+espacios(contenido86,40)+espacios("",80))
         f.close() # `()` was missing.
 
 
@@ -156,7 +187,7 @@ window = Tk()
 
 ventanas =Notebook(window)
 
-window.title("Chechu V1.7")
+window.title("Chechu V1.8")
 
 window.geometry("900x900")
 
@@ -249,6 +280,37 @@ Planta_tercero = StringVar()
 Puerta_tercero = StringVar()
 Otra_Informacion_direccion_tercero = StringVar()
 Poblacion_Fiscal_tercero= StringVar()
+
+codigo_de_tercero_domicilio = StringVar()
+Tipo_Documento_domicilio = StringVar()
+Identificador_domicilio = StringVar()
+Tipo_Persona_domicilio = StringVar()
+Identificador_Normalizado_domicilio = StringVar()
+Apellido_1_domicilio = StringVar()
+Apellido_2_domicilio = StringVar()
+Particula_Apellido_1_domicilio = StringVar()
+Particula_Apellido_2_domicilio = StringVar()
+Nombre_domicilio = StringVar()
+Pais_Fiscal_domicilio = StringVar()
+Provincia_Fiscal_domicilio = StringVar()
+Poblacion_Fiscal_domicilio = StringVar()
+Codigo_postal_tributario_domicilio = StringVar()
+Identificador_Callejero_domicilio = StringVar()
+Codigo_Via_domicilio = StringVar()
+Tipo_Via_domicilio = StringVar()
+Nombre_Via_domicilio = StringVar()
+Numero_domicilio = StringVar()
+Letra_Numero_domicilio = StringVar()
+Kilometro_domicilio = StringVar()
+Bloque_domicilio = StringVar()
+Escalera_domicilio = StringVar()
+Planta_domicilio = StringVar()
+Puerta_domicilio = StringVar()
+Otra_Informacion_direccion_domicilio = StringVar()
+Codigo_banco_domicilio = StringVar()
+Codigo_sucursal_domicilio = StringVar()
+Check_domicilio = StringVar()
+numero_cuenta_domicilio = StringVar()
 #menu de arriba
 menu = Menu(window)
 
@@ -287,6 +349,8 @@ desplegable2= Combobox(vent1,textvariable=Tipo_Valor)
 desplegable3= Combobox(vent2,textvariable=Identificador_Normalizado)
 desplegable4= Combobox(vent5,textvariable=Identificador_Normalizado_Tercero)
 desplegable5= Combobox(vent5,textvariable=Identificador_Callejero_tercero)
+desplegable6 = Combobox(vent6,textvariable=Identificador_Callejero_domicilio)
+
 #texto
 
 lbl1 = Label(vent1, text="Concepto Tributario: ")
@@ -544,6 +608,97 @@ lbl26Asociado.grid(column=2,row=6)
 
 lbl27Asociado = Label(vent5,text="Otra Información de la Dirección      ")
 lbl27Asociado.grid(column=4,row=6)
+
+lbl1_Domicilio = Label(vent6,text="Codigo de Tercero")
+lbl1_Domicilio.grid(column=0,row=0)
+
+lbl2_Domicilio = Label(vent6,text="Tipo de documento")
+lbl2_Domicilio.grid(column=2,row=0)
+
+lbl3_Domicilio = Label(vent6,text="Identificador ")
+lbl3_Domicilio.grid(column=4,row=0)
+
+lbl4_Domicilio = Label(vent6,text="tipo de Persona")
+lbl4_Domicilio.grid(column=6,row=0)
+
+lbl5_Domicilio = Label(vent6,text="Identificador normalizado  ")
+lbl5_Domicilio.grid(column=0,row=1)
+
+
+lbl6_Domicilio = Label(vent6,text="Apellido 1")
+lbl6_Domicilio.grid(column=2,row=1)
+
+lbl7_Domicilio = Label(vent6,text="Apellido 2")
+lbl7_Domicilio.grid(column=4,row=1)
+
+lbl8_Domicilio = Label(vent6,text=" Particula Apellido 1")
+lbl8_Domicilio.grid(column=6,row=1)
+
+lbl9_Domicilio = Label(vent6,text=" Particula Apellido 2")
+lbl9_Domicilio.grid(column=0,row=2)
+
+lbl10_Domicilio = Label(vent6,text=" Nombre")
+lbl10_Domicilio.grid(column=2,row=2)
+
+lbl11_Domicilio = Label(vent6,text=" Pais fiscal")
+lbl11_Domicilio.grid(column=4,row=2)
+
+lbl12_Domicilio = Label(vent6,text=" Provincia Fiscal ")
+lbl12_Domicilio.grid(column=6,row=2)
+
+lbl13_Domicilio = Label(vent6,text=" Poblacion  Fiscal ")
+lbl13_Domicilio.grid(column=0,row=3)
+
+lbl14_Domicilio = Label(vent6,text=" Código Postal Tributario ")
+lbl14_Domicilio.grid(column=2,row=3)
+
+lbl15_Domicilio = Label(vent6,text=" Identificador Callejero")
+lbl15_Domicilio.grid(column=4,row=3)
+
+lbl16_Domicilio = Label(vent6,text=" Código de Vía")
+lbl16_Domicilio.grid(column=6,row=3)
+
+lbl17_Domicilio = Label(vent6,text=" Tipo de Vía")
+lbl17_Domicilio.grid(column=0,row=4)
+
+lbl18_Domicilio = Label(vent6,text=" Nombre de Vía")
+lbl18_Domicilio.grid(column=2,row=4)
+
+lbl19_Domicilio = Label(vent6,text="Número")
+lbl19_Domicilio.grid(column=4,row=4)
+
+lbl20_Domicilio = Label(vent6,text="Letra del Número")
+lbl20_Domicilio.grid(column=6,row=4)
+
+lbl21_Domicilio = Label(vent6,text="Kilómetro ")
+lbl21_Domicilio.grid(column=0,row=5)
+
+lbl22_Domicilio = Label(vent6,text="Bloque  ")
+lbl22_Domicilio.grid(column=2,row=5)
+
+lbl23_Domicilio = Label(vent6,text="Escalera")
+lbl23_Domicilio.grid(column=4,row=5)
+
+lbl24_Domicilio = Label(vent6,text="Planta ")
+lbl24_Domicilio.grid(column=6,row=5)
+
+lbl25_Domicilio = Label(vent6,text="Puerta  ")
+lbl25_Domicilio.grid(column=0,row=6)
+
+lbl26_Domicilio = Label(vent6,text="Otra Información de la Dirección   ")
+lbl26_Domicilio.grid(column=2,row=6)
+
+lbl27_Domicilio = Label(vent6,text="Código de Banco")
+lbl27_Domicilio.grid(column=4,row=6)
+
+lbl28_Domicilio = Label(vent6,text="Código de Sucursal")
+lbl28_Domicilio.grid(column=6,row=6)
+
+lbl29_Domicilio = Label(vent6,text="Check ")
+lbl29_Domicilio.grid(column=0,row=7)
+
+lbl30_Domicilio = Label(vent6,text="Número de Cuenta ")
+lbl30_Domicilio.grid(column=2,row=7)
 #entrada de texto
 
 txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
@@ -796,6 +951,101 @@ txt28_Asosiado.grid(column=3,row=6)
 
 txt29_Asosiado = Entry(vent5,width=10,textvariable=Otra_Informacion_direccion_tercero)
 txt29_Asosiado.grid(column=5,row=6)
+
+
+
+
+txt1_domicilio=  Entry(vent6,width=10,textvariable=codigo_de_tercero_domicilio)
+txt1_domicilio.grid(column=1,row=0)
+
+txt2_domicilio=  Entry(vent6,width=10,textvariable=Tipo_Documento_domicilio)
+txt2_domicilio.grid(column=3,row=0)
+
+txt3_domicilio=  Entry(vent6,width=10,textvariable=Identificador_domicilio)
+txt3_domicilio.grid(column=5,row=0)
+
+txt4_domicilio=  Entry(vent6,width=10,textvariable=Tipo_Persona_domicilio)
+txt4_domicilio.grid(column=7,row=0)
+
+txt5_domicilio=  Entry(vent6,width=10,textvariable=Identificador_Normalizado_domicilio)
+txt5_domicilio.grid(column=1,row=1)
+
+txt6_domicilio=  Entry(vent6,width=10,textvariable=Apellido_1_domicilio)
+txt6_domicilio.grid(column=3,row=1)
+
+txt7_domicilio=  Entry(vent6,width=10,textvariable=Apellido_2_domicilio)
+txt7_domicilio.grid(column=5,row=1)
+
+txt8_domicilio=  Entry(vent6,width=10,textvariable=Particula_Apellido_1_domicilio)
+txt8_domicilio.grid(column=7,row=1)
+
+txt9_domicilio=  Entry(vent6,width=10,textvariable=Particula_Apellido_2_domicilio)
+txt9_domicilio.grid(column=1,row=2)
+
+txt10_domicilio=  Entry(vent6,width=10,textvariable=Nombre_domicilio)
+txt10_domicilio.grid(column=3,row=2)
+
+txt11_domicilio=  Entry(vent6,width=10,textvariable=Pais_Fiscal_domicilio)
+txt11_domicilio.grid(column=5,row=2)
+
+txt12_domicilio=  Entry(vent6,width=10,textvariable=Provincia_Fiscal_domicilio)
+txt12_domicilio.grid(column=7,row=2)
+
+txt13_domicilio=  Entry(vent6,width=10,textvariable=Poblacion_Fiscal_domicilio)
+txt13_domicilio.grid(column=1,row=3)
+
+txt15_domicilio=  Entry(vent6,width=10,textvariable=Codigo_postal_tributario_domicilio)
+txt15_domicilio.grid(column=3,row=3)
+
+
+desplegable6["values"]=("S" ,"N")
+desplegable6.grid(column=5,row=3)
+
+
+txt16_domicilio=  Entry(vent6,width=10,textvariable=Codigo_Via_domicilio)
+txt16_domicilio.grid(column=7,row=3)
+
+txt17_domicilio=  Entry(vent6,width=10,textvariable=Tipo_Via_domicilio)
+txt17_domicilio.grid(column=1,row=4)
+
+txt18_domicilio=  Entry(vent6,width=10,textvariable=Nombre_Via_domicilio)
+txt18_domicilio.grid(column=3,row=4)
+
+txt19_domicilio=  Entry(vent6,width=10,textvariable=Numero_domicilio)
+txt19_domicilio.grid(column=5,row=4)
+
+txt20_domicilio=  Entry(vent6,width=10,textvariable=Letra_Numero_domicilio)
+txt20_domicilio.grid(column=7,row=4)
+
+txt21_domicilio=  Entry(vent6,width=10,textvariable=Kilometro_domicilio)
+txt21_domicilio.grid(column=1,row=5)
+
+txt22_domicilio=  Entry(vent6,width=10,textvariable=Bloque_domicilio)
+txt22_domicilio.grid(column=3,row=5)
+
+txt23_domicilio=  Entry(vent6,width=10,textvariable=Escalera_domicilio)
+txt23_domicilio.grid(column=5,row=5)
+
+txt24_domicilio=  Entry(vent6,width=10,textvariable=Planta_domicilio)
+txt24_domicilio.grid(column=7,row=5)
+
+txt25_domicilio=  Entry(vent6,width=10,textvariable=Puerta_domicilio)
+txt25_domicilio.grid(column=1,row=6)
+
+txt26_domicilio=  Entry(vent6,width=10,textvariable=Otra_Informacion_direccion_domicilio)
+txt26_domicilio.grid(column=3,row=6)
+
+txt27_domicilio=  Entry(vent6,width=10,textvariable=Codigo_banco_domicilio)
+txt27_domicilio.grid(column=5,row=6)
+
+txt28_domicilio=  Entry(vent6,width=10,textvariable=Codigo_sucursal_domicilio)
+txt28_domicilio.grid(column=7,row=6)
+
+txt29_domicilio=  Entry(vent6,width=10,textvariable=Check_domicilio)
+txt29_domicilio.grid(column=1,row=7)
+
+txt30_domicilio=  Entry(vent6,width=10,textvariable=numero_cuenta_domicilio)
+txt30_domicilio.grid(column=3,row=7)
 #desplegables
 
 desplegable["values"]=("E","V","P")
@@ -813,6 +1063,5 @@ desplegable4.grid(column=3,row=1)
 desplegable5["values"]=("S","N")
 desplegable5.grid(column=7,row=3)
 
+ventanas.grid()
 window.mainloop()
-
-#archivos
