@@ -165,12 +165,12 @@ def clicked():
         messagebox.showerror("ERROR","EL Ejercicio tributario no puede tener mas de 4 caracteres")
     if len(contenido4)>2:
         messagebox.showerror("ERROR","EL Periodo no puede ser mayor a 2")
-    if len(contenido5)<0:
+    if len(contenido5)==0:
         messagebox.showerror("ERROR","Seleciona algo en el desplegable de Situacion concepto")
-    if len(contenido6)<0:
+    if len(contenido6)==0:
          messagebox.showerror("ERROR","Seleciona algo en el desplegable de Tipo Valor")
     else:
-        f = filedialog.asksaveasfile(initialfile =str(dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
+        f = filedialog.asksaveasfile(initialfile =str("Recibo "+dia),title = "Guardar como",defaultextension=".txt", filetypes=[("Text file",".txt")])
         if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
             return
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
@@ -354,17 +354,15 @@ vent4 = Frame(ventanas)
 vent5 = Frame(ventanas)
 vent6 = Frame(ventanas)
 vent7 = Frame(ventanas)
-vent8 = Frame(ventanas)
-vent9 = Frame(ventanas)
+
 ventanas.add(vent1, text='Cabecera')
-ventanas.add(vent2, text='Cuerpo')
-ventanas.add(vent3, text='Cuerpo')
-ventanas.add(vent4, text='Cuerpo')
-ventanas.add(vent5, text='Cuerpo')
-ventanas.add(vent6, text='Cuerpo')
-ventanas.add(vent7, text='Cuerpo')
-ventanas.add(vent8, text='Cuerpo')
-ventanas.add(vent9, text='Cuerpo')
+ventanas.add(vent2, text='Individual')
+ventanas.add(vent3, text='Domicilio Fiscal')
+ventanas.add(vent4, text='Cuerpo Recibo')
+ventanas.add(vent5, text='Terceros asociados')
+ventanas.add(vent6, text='Domiciliaciones')
+ventanas.add(vent7, text='Totales')
+
 #desplegable de cabezera
 desplegable= Combobox(vent1,textvariable=Situacion_Concepto)
 desplegable2= Combobox(vent1,textvariable=Tipo_Valor)
