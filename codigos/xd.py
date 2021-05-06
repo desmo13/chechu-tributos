@@ -146,6 +146,17 @@ def clicked():
     contenido118 = Codigo_sucursal_domicilio.get()
     contenido119 =  Check_domicilio.get()
     contenido120 = numero_cuenta_domicilio.get()
+
+    contenido121= numero_registro_ti.get()
+    contenido122 =  numero_registro_f.get()
+    contenido123 =  numero_registro_l.get()
+    contenido124 = numero_registro_o.get()
+    contenido125 = numero_registro_A.get()
+    contenido126 =  numero_registro_d.get()
+    contenido127 = importe_total_euros.get()
+    contenido128 = importe_total_pesetas.get()
+
+
     if len(contenido1)>12:
         messagebox.showerror("ERROR","El cocepto tributario no puede ser mayor a 12 caracteres")
     if len(contenido2)>5:
@@ -163,7 +174,7 @@ def clicked():
         if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
             return
         #text2save = txt1.get(1.0, END) # starts from `1.0`, not `0.0`
-        f.write("C"+ espacios(contenido1,12)+espacios(contenido2,5)+espacios(contenido3,4)+espacios(contenido4,2)+contenido5+contenido6+espacios("",308))
+        f.write("C"+ espacios(contenido1,12)+numeros_espacios(contenido2,5)+numeros_espacios(contenido3,4)+numeros_espacios(contenido4,2)+espacios(contenido5,1)+espacios(contenido6,1)+espacios("",308))
         f.write("\nI"+espacios(contenido7,5)+espacios("",8)+espacios(contenido8,24)+espacios(contenido9,15)+espacios("",1)+espacios(contenido10,24)+espacios(contenido11,12)+numeros_espacios(contenido12,1)+espacios(contenido13,20)+espacios(contenido14,1)+espacios(contenido15,1)+espacios(contenido16,25)+espacios(contenido17,25)+espacios(contenido18,6)+espacios(contenido19,6)+espacios(contenido20,20)+numeros_espacios(contenido21,5)+espacios(contenido22,1)+numeros_espacios(contenido23,5)+espacios(contenido24,5)+espacios(contenido25,50)+numeros_espacios(contenido26,4)+espacios(contenido27,1)+numeros_espacios(contenido28,5)+espacios(contenido29,2)+espacios(contenido30,2)+espacios(contenido31,3)+espacios(contenido32,4)+espacios(contenido33,40)+numeros_espacios(contenido34,12))
         f.write("\nF"+numeros_espacios(contenido35,3)+numeros_espacios(contenido36,2)+numeros_espacios(contenido37,3)+numeros_espacios(contenido38,5)+espacios(contenido39,1)+numeros_espacios(contenido40,5)+espacios(contenido41,5)+espacios(contenido42,50)+numeros_espacios(contenido43,4)+espacios(contenido44,1)+numeros_espacios(contenido45,5)+espacios(contenido46,2)+espacios(contenido47,2)+espacios(contenido48,3)+espacios(contenido49,4)+espacios(contenido50,40)+espacios("",198))
         f.write("\nL1"+espacios(contenido51,80)+espacios("",252))
@@ -176,6 +187,7 @@ def clicked():
         f.write("\nL8"+espacios(contenido58,80)+espacios("",252))
         f.write("\nA"+espacios(contenido60,1)+espacios(contenido61,12)+numeros_espacios(contenido62,1)+espacios(contenido63,20)+espacios(contenido64,1)+espacios(contenido65,1)+espacios(contenido66,25)+espacios(contenido67,25)+espacios(contenido68,6)+espacios(contenido69,6)+espacios(contenido70,20)+numeros_espacios(contenido71,3)+numeros_espacios(contenido72,2)+numeros_espacios(contenido73,3)+numeros_espacios(contenido74,5)+espacios(contenido75,1)+numeros_espacios(contenido76,5)+espacios(contenido77,5)+espacios(contenido78,50)+numeros_espacios(contenido79,4)+espacios(contenido80,1)+numeros_espacios(contenido81,5)+espacios(contenido82,2)+espacios(contenido83,2)+espacios(contenido84,3)+espacios(contenido85,4)+espacios(contenido86,40)+espacios("",80))
         f.write("\nD"+espacios(contenido91,12)+numeros_espacios(contenido92,1)+espacios(contenido93,20)+espacios(contenido94,1)+espacios(contenido95,1)+espacios(contenido96,25)+espacios(contenido97,25)+espacios(contenido98,6)+espacios(contenido99,6)+espacios(contenido100,20)+numeros_espacios(contenido101,3)+numeros_espacios(contenido102,2)+numeros_espacios(contenido103,3)+numeros_espacios(contenido104,5)+espacios(contenido105,1)+numeros_espacios(contenido106,5)+espacios(contenido107,5)+espacios(contenido108,50)+numeros_espacios(contenido109,4)+espacios(contenido110,1)+numeros_espacios(contenido111,5)+espacios(contenido112,2)+espacios(contenido113,2)+espacios(contenido114,3)+espacios(contenido115,4)+espacios(contenido116,40)+numeros_espacios(contenido117,4)+numeros_espacios(contenido118,4)+espacios(contenido119,2)+numeros_espacios(contenido120,10)+espacios("",61))
+        f.write("\nT"+numeros_espacios(contenido121,6)+numeros_espacios(contenido122,6)+numeros_espacios(contenido123,6)+numeros_espacios(contenido124,6)+numeros_espacios(contenido125,6)+numeros_espacios(contenido126,6)+numeros_espacios(contenido127,12)+numeros_espacios(contenido128,9)+espacios("",276))
         f.close() # `()` was missing.
 
 
@@ -188,7 +200,7 @@ window = Tk()
 
 ventanas =Notebook(window)
 
-window.title("Chechu V1.8")
+window.title("Chechu V1.9")
 
 window.geometry("900x900")
 
@@ -312,6 +324,15 @@ Codigo_banco_domicilio = StringVar()
 Codigo_sucursal_domicilio = StringVar()
 Check_domicilio = StringVar()
 numero_cuenta_domicilio = StringVar()
+
+numero_registro_ti = StringVar()
+numero_registro_f = StringVar()
+numero_registro_l = StringVar()
+numero_registro_o = StringVar()
+numero_registro_A = StringVar()
+numero_registro_d = StringVar()
+importe_total_euros = StringVar()
+importe_total_pesetas = StringVar()
 #menu de arriba
 menu = Menu(window)
 
@@ -700,6 +721,30 @@ lbl29_Domicilio.grid(column=0,row=7)
 
 lbl30_Domicilio = Label(vent6,text="Número de Cuenta ")
 lbl30_Domicilio.grid(column=2,row=7)
+
+lbl1_totales = Label(vent7,text="Número de registros Tipo I")
+lbl1_totales.grid(column=0,row=0)
+
+lbl2_totales = Label(vent7,text="Número de registros Tipo F ")
+lbl2_totales.grid(column=2,row=0)
+
+lbl3_totales = Label(vent7,text="Número de registros Tipo L  ")
+lbl3_totales.grid(column=4,row=0)
+
+lbl4_totales = Label(vent7,text="Número de registros Tipo O")
+lbl4_totales.grid(column=6,row=0)
+
+lbl5_totales = Label(vent7,text="Número de registros Tipo A")
+lbl5_totales.grid(column=0,row=1)
+
+lbl6_totales = Label(vent7,text="Número de registros Tipo D")
+lbl6_totales.grid(column=2,row=1)
+
+lbl7_totales = Label(vent7,text="Importe Total Cargo €")
+lbl7_totales.grid(column=4,row=1)
+
+lbl8_totales = Label(vent7,text="Importe Total Cargo pesetas")
+lbl8_totales.grid(column=6,row=1)
 #entrada de texto
 
 txt1 = Entry(vent1,width=10,textvariable=Concepto_Tributario)
@@ -1047,6 +1092,30 @@ txt29_domicilio.grid(column=1,row=7)
 
 txt30_domicilio=  Entry(vent6,width=10,textvariable=numero_cuenta_domicilio)
 txt30_domicilio.grid(column=3,row=7)
+
+txt1_total = Entry(vent7,width=10,textvariable=numero_registro_ti)
+txt1_total.grid(column=1,row=0)
+
+txt2_total = Entry(vent7,width=10,textvariable=numero_registro_f)
+txt2_total.grid(column=3,row=0)
+
+txt3_total = Entry(vent7,width=10,textvariable=numero_registro_l)
+txt3_total.grid(column=5,row=0)
+
+txt4_total = Entry(vent7,width=10,textvariable=numero_registro_o)
+txt4_total.grid(column=7,row=0)
+
+txt5_total = Entry(vent7,width=10,textvariable=numero_registro_A)
+txt5_total.grid(column=1,row=1)
+
+txt6_total = Entry(vent7,width=10,textvariable=numero_registro_d)
+txt6_total.grid(column=3,row=1)
+
+txt7_total = Entry(vent7,width=10,textvariable=importe_total_euros)
+txt7_total.grid(column=5,row=1)
+
+txt8_total = Entry(vent7,width=10,textvariable=importe_total_pesetas)
+txt8_total.grid(column=7,row=1)
 #desplegables
 
 desplegable["values"]=("E","V","P")
