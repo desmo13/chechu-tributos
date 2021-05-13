@@ -199,7 +199,10 @@ def clicked():
 window = Tk()
 
 ventanas =Notebook(window)
+s= Style()
 
+s.theme_names() 
+s.theme_use('Arc')
 window.title("Chechu V1.9")
 
 window.geometry("900x900")
@@ -361,7 +364,7 @@ ventanas.add(vent3, text='Domicilio Fiscal')
 ventanas.add(vent4, text='Cuerpo Recibo')
 ventanas.add(vent5, text='Terceros asociados')
 ventanas.add(vent6, text='Domiciliaciones')
-ventanas.add(vent7, text='Totales')
+ventanas.add(vent7, text='Totales           ')
 
 #desplegable de cabezera
 desplegable= Combobox(vent1,textvariable=Situacion_Concepto)
