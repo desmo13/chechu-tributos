@@ -3,9 +3,10 @@
 import PySimpleGUI as sg
 sg.theme('Topanga')
 layout = [
-            [sg.Text('hola soy un texto'),sg.Image(r'1.png')],
+            [sg.Text('hola soy un texto'),sg.Image(r'1.png',size=(45,5))],
             [sg.Input("texto default",do_not_clear=True, enable_events=True, key='hola_pepe'),sg.Input("hola",key='me_cago_en_las_moscas',enable_events=True,do_not_clear=True)],
             [sg.Multiline('This is what a Multi-line Text Element looks like', size=(45,5))],
+            #[sg.popup('popup')],
             [sg.Button('Exit')]
          ]
 
